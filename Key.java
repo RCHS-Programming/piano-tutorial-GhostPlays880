@@ -19,13 +19,13 @@ public class Key extends Actor
      */
     public void act()
     {
-        if(!isDown && Greenfoot.isKeyDown("g"))
+        if(!isDown && Greenfoot.isKeyDown(key))
         {
             setImage("white-key-down.png");
            isDown = true;
            play();
         }
-        if (isDown && !Greenfoot.isKeyDown ("g"))
+        if (isDown && !Greenfoot.isKeyDown (key))
         { 
             setImage("white-key.png");
             isDown = false;
@@ -36,6 +36,6 @@ public class Key extends Actor
      */
     public void play()
     {
-        Greenfoot.playSound ("3a.wav");
+        Greenfoot.playSound (sound);
     }
 }
